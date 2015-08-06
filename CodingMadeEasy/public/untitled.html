@@ -1,0 +1,506 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Javascript Pokemon Game is a new Pokemon adventure. Enter the world of the Pokemon from the Viridian Forest and create a whole new story. Don't wait! Play now!" />
+<meta name="keywords" content="javascript pokemon game, pokemon game, pokemon, game, raffay, raffay.pl, pokemons, game, new adventure, pokeballs" />
+<meta property="fb:admins" content="100000326455483" />
+<title>JavaScript Pokemon Game</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="icon" href="gfx/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="gfx/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="js/lib/jquery-1.7.1.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31516462-1']);
+  _gaq.push(['_setDomainName', 'raffay.pl']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<h1>Javascript Pokemon Game</h1>
+<div id="language">
+	<div class="lang_c1"></div>
+	<div class="set_language">
+    	Language: <img src="gfx/lang/en.gif" alt="język angielski" /> <a href="http://game.raffay.pl" target="_blank"><img src="gfx/lang/pl.gif" alt="język polski"/></a>
+    </div>
+    <div class="lang_c2"></div>
+</div>
+<div id="game_space">
+	<div id="topRankBox">
+		<table id="header_rank_top">
+			<tr>
+				<td class="l_1"></td>
+				<td class="l_2">Player</td>
+                <td class="l_3">Pokemon</td>
+                <td class="l_4">Level</td>
+                <td class="l_5">Time</td>
+                <td class="l_6">Status</td>
+			</tr>
+		</table>
+		<table id="game_rank_top">
+			<tr><td class='l_1'>1.</td><td class='l_2'><img src='gfx/lang/en-min.png' alt='lang-en'/> tomLad2</td><td class='l_3'>Charmander</td><td class='l_4'>5</td><td class='l_5'>00:04:25</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>2.</td><td class='l_2'><img src='gfx/lang/en-min.png' alt='lang-en'/> Flynn</td><td class='l_3'>Charmander</td><td class='l_4'>5</td><td class='l_5'>00:04:58</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>3.</td><td class='l_2'><img src='gfx/lang/pl-min.png' alt='lang-pl'/> Agreas</td><td class='l_3'>Squirtle</td><td class='l_4'>5</td><td class='l_5'>00:05:15</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>4.</td><td class='l_2'><img src='gfx/lang/pl-min.png' alt='lang-pl'/> Galgador</td><td class='l_3'>Charmander</td><td class='l_4'>6</td><td class='l_5'>00:06:31</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>5.</td><td class='l_2'><img src='gfx/lang/pl-min.png' alt='lang-pl'/> zły bug</td><td class='l_3'>Charmander</td><td class='l_4'>5</td><td class='l_5'>00:08:19</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>6.</td><td class='l_2'><img src='gfx/lang/pl-min.png' alt='lang-pl'/> Division</td><td class='l_3'>Squirtle</td><td class='l_4'>6</td><td class='l_5'>00:08:22</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>7.</td><td class='l_2'><img src='gfx/lang/en-min.png' alt='lang-en'/> Asquin</td><td class='l_3'>Bulbasaur</td><td class='l_4'>6</td><td class='l_5'>00:08:29</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>8.</td><td class='l_2'><img src='gfx/lang/pl-min.png' alt='lang-pl'/> Orange</td><td class='l_3'>Charmander</td><td class='l_4'>7</td><td class='l_5'>00:09:10</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>9.</td><td class='l_2'><img src='gfx/lang/pl-min.png' alt='lang-pl'/> bitor</td><td class='l_3'>Charmander</td><td class='l_4'>8</td><td class='l_5'>00:13:04</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>10.</td><td class='l_2'><img src='gfx/lang/pl-min.png' alt='lang-pl'/> ZnowuHarry</td><td class='l_3'>Charmander</td><td class='l_4'>9</td><td class='l_5'>00:13:17</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>11.</td><td class='l_2'><img src='gfx/lang/pl-min.png' alt='lang-pl'/> but poki</td><td class='l_3'>Charmander</td><td class='l_4'>6</td><td class='l_5'>00:14:37</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>12.</td><td class='l_2'><img src='gfx/lang/pl-min.png' alt='lang-pl'/> mhkol</td><td class='l_3'>Charmander</td><td class='l_4'>5</td><td class='l_5'>00:15:12</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>13.</td><td class='l_2'><img src='gfx/lang/en-min.png' alt='lang-en'/> w23</td><td class='l_3'>Bulbasaur</td><td class='l_4'>9</td><td class='l_5'>00:15:18</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>14.</td><td class='l_2'><img src='gfx/lang/en-min.png' alt='lang-en'/> ark</td><td class='l_3'>Squirtle</td><td class='l_4'>8</td><td class='l_5'>00:16:15</td><td class='l_6'>100%</td></tr><tr><td class='l_1'>15.</td><td class='l_2'><img src='gfx/lang/en-min.png' alt='lang-en'/> laro</td><td class='l_3'>Wartortle</td><td class='l_4'>10</td><td class='l_5'>00:19:01</td><td class='l_6'>100%</td></tr>		</table>
+    	<img class="win_close closeTopRank" src="gfx/win/close.png" alt="zamknij to okno" />
+    </div>
+	<div id="menu_space">
+        <div id="menuUp">
+            <div class="content">
+                <img class="pok_mini" src="gfx/pok/main/main_blank.png" alt="miniaturka pokemona" />
+                <div class="menu_lvl"><span class="pok_name"></span><br />Level&nbsp;<span class="lvl_val"></span></div>
+                <div class="menu_hp">HP:&nbsp;<span class="_hp"></span>/100<br />EX:&nbsp;<span class="_exp"></span>/1000</div>
+                <div class="menu_money"><div class="sub_bck"><p>x <span class="_cash"></span></p></div></div>
+                <div class="menu_percent"></div>
+                <div class="menu_player"></div>
+            </div>
+        </div>
+        <div id="menuDown">
+            <div class="content">
+                <p>Pokemon</p>
+                <p>Pokedex</p>
+                <p>Luggage</p>
+                <p>Tasks</p>
+                <p>Statistics</p>
+                <p>Ranking</p>
+                <p>Info</p>
+            </div>
+        </div>
+    </div>
+    <div id="bckBox"></div>
+    <div id="gameBox">
+        <div id="shadowBck"></div>
+        <div id="mPokemon">
+            <div id="main_pokemon">
+                <span class="pok_name"></span>
+                <img class="pok_min" src="gfx/pok/main/mini_blank.gif" alt="miniaturka pokemona" />
+				<img class="pok_spec" src="gfx/pok/species/spec_blank.png" alt="gatunek pokemona" />
+            	<div id="stats">
+                	<table class="stats">
+                	    <tr>
+                	        <td class="fr">Level:</td>
+                	        <td><span class="lvl_val"></span></td>
+            	        </tr>
+                	    <tr>
+                	        <td class="fr lr">Attack:</td>
+                	        <td><span class="att_val"></span></td>
+            	        </tr>
+                	    <tr>
+                	        <td class="fr">Defence:</td>
+                	        <td><span class="def_val"></span></td>
+            	        </tr>
+                	    <tr>
+                	        <td class="fr">Speed:</td>
+                	        <td><span class="spd_val"></span></td>
+            	        </tr>
+            	    </table>
+                    <table class="ev">
+                	    <tr>
+                	        <td class="fr">Evolution level:</td>
+                	        <td><b><span class="pok_evo"></span></b></td>
+            	        </tr>
+                    </table>
+                    <div id="pok_hp"> 
+                        <div id="pok_pkt_hp">HP:&nbsp;<b><span class="_hp"></span>/100</b>
+                            <div class="hp_bck">
+                                <div class="blank_bck"></div>
+                                <div class="hp_val"></div>
+                            </div>
+                        </div>
+                        <div id="pok_pkt_exp">EXP:&nbsp;<b><span class="_exp"></span>/1000</b>
+                            <div class="exp_bck">
+                                <div class="blank_bck"></div>
+                                <div class="exp_val"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bestPokemon">
+                	<p>Best scores:</p>
+                    <table></table>
+                </div>
+            </div>
+            <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" /> </div>
+        <div id="mPokedex">
+            <p class="win_header">Pokedex</p>
+            <div id="catch_pokemons"> 
+                <!-- Złapane pokemony --> 
+            </div>
+            <span class="cat_count"></span> 
+            <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" /> </div>
+        <div id="mBag">
+            <p class="win_header">Luggage</p>
+            <div id="bag_content">
+            	<div id="items_parts">
+			    	<div id="mainb_p1"></div>
+                    <div id="mainb_p2"></div>
+                    <div id="mainb_p3"></div>
+                </div>
+            </div>
+            <div id="bag_pages">
+                <p class='bag_page'>1</p>
+                <p class='bag_page'>2</p>
+                <p class='bag_page'>3</p>
+            </div>
+            <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" /> </div>
+        <div id="mTask">
+            <p class="win_header">Tasks</p>
+            <div class="textMenuWindow">
+                <ul class="list_task"></ul>
+            </div>
+            <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" /> </div>
+        <div id="mRanking">
+            <p class="win_header">Top 10</p>
+               <table id="header_rank">
+                    <tr>
+                    	<td class="l_1"></td>
+                        <td class="l_2">Player</td>
+                        <td class="l_3">Pokemon</td>
+                        <td class="l_4">Level</td>
+                        <td class="l_5">Time</td>
+                        <td class="l_6">Status</td>
+                    </tr>
+                </table>
+            	<table id="game_rank">
+					<!--Ranking-->
+                </table>
+            <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+        </div>
+        <div id="mStats">
+            <p class="win_header">Statistics</p>
+            <div class="textMenuWindow">
+                <table id="game_stats">
+                    <tr>
+                        <td><img src="gfx/stats/clock.png" alt="czas gry" /></td>
+                        <td>Time of the game</td>
+                        <td><span class="gameTime"></span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="gfx/stats/shield.png" alt="ilość walk" /></td>
+                        <td>Total fights</td>
+                        <td><span class="countFight">0</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="gfx/stats/pok.png" alt="załapane pokemony" /></td>
+                        <td>Caught pokemon</td>
+                        <td><span class="countCatch"></span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="gfx/stats/task.png" alt="wykonane zadania" /></td>
+                        <td>Completed tasks</td>
+                        <td><span class="countTask"></span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="gfx/win/cash.png" alt="wydane monety" /></td>
+                        <td>Spent coins</td>
+                        <td><span class="countCash"></span></td>
+                    </tr>
+                </table>
+            </div>
+            <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+        </div>
+        <div id="mInfo">
+            <p class="win_header">Info</p>
+            <div id="info">
+            	JavaScript Pokemon Game is an educational project which shows the possibility of using JavaScript.<br /><br />HTML5/CSS3 | JavaScript/Ajax/jQuery | PHP | SQL<br /><br />
+                Works correctly on: <br />Chrome, Firefox 11, Opera 11, Safari 5, IE 8+<br /><br />
+               	Part of the graphics elements: www.spriters-resource.com<br />
+                Original map created by: Ninja Caterpie<br />
+                Copyright: Pokémon/Nintendo www.pokemon.com<br /><br /><br />
+                Created by: <br /><br />
+            	<a href="http://raffay.pl" target="_blank"><img src="gfx/raffay.png" alt="www.raffay.pl - portfolio" /></a><br />
+            </div>
+            <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+        </div>
+        <div id="fightBox">
+            <div id="fOne">
+				<p>Fight with the wild Pokémon!</p>
+            </div>
+            <div id="fTwo">
+            	<div id="scene">
+                    <div id="att"><img class="eff" src="gfx/attack/_blank.gif" alt="atak pokemona" /></div>
+                    <div id="pok_y"><img class="pok_fight" src="gfx/pok/main/fight/main_blank.png" alt="twój pokemon" /></div>
+                    <div id="pok_o"><img class="pok_o_min" src="gfx/pok/fight/fight_blank.png" alt="dziki pokemon" /></div>
+                    <div id="catch"><img class="catch" src="gfx/attack/_blank.gif" alt="załapany pokemon"/></div>
+                </div>
+                <div id="vs_1">
+                    <p class="vs_y_name"><span class="pok_name"></span></p>
+                    <p class="vs_y_lvl">Level: <b><span class="lvl_val"></span></b></p>
+                    <img class="pok_spec" src="gfx/pok/species/spec_blank.png" alt="gatunek pokemona" />
+                </div>
+                <div id="vs_3">
+                    <p class="vs_o_name">Random</p>
+                    <p class="vs_o_lvl">Level: <b><span class="op_lvl"></span></b></p>
+                    <img class="op_spec" src="gfx/pok/species/spec_blank.png" alt="gatunek dzikiego pokemona" />
+                </div>
+                <div class="hp_y">
+                    <div class="hp_bck">
+                        <div class="blank_bck"></div>
+                        <div class="hp_val"></div>
+                    </div>
+                    <div class="fight_hp_txt">&nbsp;HP: <b><span class="_hp"></span>/100</b></div>
+                </div>
+                <div class="hp_o">
+                    <div class="fight_hp_txt2">&nbsp;HP: <b><span class="op_hp"></span>/100</b></div>
+                    <div class="hp_bck">
+                        <div class="blank_bck"></div>
+                        <div class="hp_o_val"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="fThree">
+                <!-- Logi walki -->
+            </div>
+            <div id="fFour">
+            	<p class="wait">Please wait for your move...</p>
+            	<div id="contentBtns">
+                	<div id="chooseAtt" class="button normal_btn">Attack!</div> 
+                    <div id="choosePkb" class="button normal_btn">Catch!</div>
+                    <div id="chooseBag" class="button normal_btn">Luggage</div>
+                    <div id="chooseEsc" class="button normal_btn">Flee</div>        
+                </div>
+                <div id="attackBtns">
+                	<div class="backBtn"></div>
+                	<p>Select attack:</p>
+	                <div id="attack1" class="button normal_btn">Attack 1</div>
+                	<div id="attack2" class="button normal_btn">Attack 2</div>
+                </div>
+                <div id="pokeballBtns">
+                	<div class="backBtn"></div>
+                	<p>Select one of the balls:</p>
+                	<div id="pball" class="catchBtn button normal_btn">Pokeball</div>
+                    <div id="sball" class="catchBtn button normal_btn">Superball</div>
+                </div>
+                <div id="bagBtns">
+                	<div class="backBtn"></div>
+                    <p>Select improvement:</p>
+                    <div id="bag_nav">
+                    	<p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+                    <div id="itemsFightBox">
+                    	<div id="fightBag_parts">
+                        	<div class="partof">
+                        		<div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                        		<div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                        		<div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                        		<div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                            </div>
+                            <div class="partof">
+                                <div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                                <div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                                <div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                                <div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                            </div>
+                            <div class="partof">
+                                <div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                                <div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                                <div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                                <div class="bagItem button_m min_btn"><span class="null">(empty)</span></div>
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                <div id="noSpace">
+                	<div class="backBtn"></div>
+                	<p></p>
+                </div>
+            </div>
+            <div id="fFive">
+           		<span class="itemsTxt1">Pokeballs:</span>
+                <table class="pokeballs">
+                    <tr>
+                        <td><img src="gfx/items/pokeball.png" alt="pokeball" /></td>
+                        <td><span class="_pball"></span> x Pokeball</td>
+                    </tr>
+                    <tr>
+                        <td><img src="gfx/items/superball.png" alt="superball" /></td>
+                        <td><span class="_sball"></span> x Superball</td>
+                    </tr>
+                </table>
+                <span class="itemsTxt2">Used luggage:</span>
+                <table class="itemsFight">
+					<!-- Bagaż w wlace -->
+                </table>
+            </div>
+        </div>
+        <div id="talks">
+            <div id="talk0">
+            	<p class="win_header">Fat Matt</p>
+                <p class="npc_des"></p>
+                <div class="cash">
+                	<p class="cashTxt">Your coins:</p>
+               		<div class="npc_cash"><b><span class="_cash"></span></b></div>
+                </div>
+                <div class="npc_bag"></div>
+                <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+            </div>
+            <div id="talk1">
+            	<p class="win_header">Amy</p>
+                <p class="npc_des"></p>
+                <div class="cash">
+                	<p class="cashTxt">Your coins:</p>
+               		<div class="npc_cash"><b><span class="_cash"></span></b></div>
+                </div>
+                <div class="npc_bag"></div>
+                <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+            </div>
+            <div id="talk2">
+            	<p class="win_header"></p>
+                <img class="npc_min" src="gfx/npcs/min_blank.png" alt="miniaturka npc" />
+                <p class="npc_des"></p>
+                <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+            </div>
+            <div id="talk3">
+            	<p class="win_header"></p>
+                <img class="npc_min" src="gfx/npcs/min_blank.png" alt="miniaturka npc" />
+                <p class="npc_des"></p>
+                <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+            </div>
+            <div id="talk4">
+            	<p class="win_header"></p>
+                <img class="npc_min" src="gfx/npcs/min_blank.png" alt="miniaturka npc" />
+                <p class="npc_des"></p>
+                <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+            </div>
+            <div id="talk5">
+            	<p class="win_header"></p>
+                <img class="npc_min" src="gfx/npcs/min_blank.png" alt="miniaturka npc" />
+                <p class="npc_des"></p>
+                <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+            </div>
+            <div id="talk6">
+            	<p class="win_header"></p>
+                <img class="npc_min" src="gfx/npcs/min_blank.png" alt="miniaturka npc" />
+                <p class="npc_des"></p>
+                <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+            </div>
+            <div id="talk7">
+            	<p class="win_header"></p>
+                <img class="npc_min" src="gfx/npcs/min_blank.png" alt="miniaturka npc" />
+                <p class="npc_des"></p>
+                <img class="win_close" src="gfx/win/close.png" alt="zamknij to okno" />
+            </div>
+        </div>
+        <div id="alertWindow">
+            <p class="alertText"></p>
+            <img id="closeWinAlert" src="gfx/win/close.png" alt="zamknij to okno" />
+        </div>
+        <div id="talkWith">
+            <div class="p1"></div>
+            <div class="p2">
+            	<p></p>
+            </div>
+            <div class="p3"></div>
+        </div>
+        <div id="gameStage">
+       		<div id="loadingBox">Loading...</div>
+            <div id="endBox">
+            	<p><b>Congratulation!</b><br /><br />You have finished the whole game!<br /><br />Check your score in the Top 10!</p>
+                <div class="button normal_btn">OK</div>
+       		</div>
+            <div id="welcomeBox">
+            	<div id="step1">
+                    <h2 class="title">New Pokemon Game is waiting for you!</h2>
+                    <p class="nick">Your nickname:</p>
+                    <div id="nick_box">
+						<input class="you_name" value=""/>
+					</div>
+                    <div id="check" class="button normal_btn">OK</div>
+                    <p id="checkAlert"></p>
+                </div>
+                <div id="step2">
+               		<p class="title">Select your pokemon:</p>
+                    <div id="three_btns">
+                        <div class="big_btn">
+                            <span>Charmander</span>
+                            <img class="one" src="gfx/pok/main/main1_1.png" alt="Charmander" />
+                            <img class="two" src="gfx/pok/species/fire.png" alt="gatunek" />
+                        </div>
+                        <div class="big_btn">
+                            <span>Bulbasaur</span>
+                            <img class="one" src="gfx/pok/main/main2_1.png" alt="Bulbasaur" />
+                            <img class="two" src="gfx/pok/species/grass.png" alt="gatunek" />
+                        </div>
+                        <div class="big_btn">
+                            <span>Squirtle</span>
+                            <img class="one" src="gfx/pok/main/main3_1.png" alt="Squirtle" />
+                            <img class="two" src="gfx/pok/species/water.png" alt="gatunek" />
+                        </div>
+                    </div>
+                </div>
+                <div id="step3">
+                	<div class="hello"><b>Welcome to the world of Pokemon!</b><br /><br /><br />Your main goal is to complete all <b>7</b> tasks. To do this, you must talk with the people on your road, collect information from the boards, fight and catch the wild Pokemon.<img src="gfx/win/step_sep.png" alt="separator" />You will find wild Pokemon in the high grasses. During the fight, you can use your Pokemon's attacks, your luggage and pokeballs in which you can catch them.<img src="gfx/win/step_sep.png" alt="separator" />You can see your current score in the <b>'Ranking'</b>, after you complete one of the seven task. Complete them as soon as possible, and you may find yourself in the first place!<img src="gfx/win/step_sep.png" alt="separator" />To control your character use the <b>'WSAD'</b> keys and <b>mouse</b>.<br /><br /><br /><b>Good luck!</b></div>
+					<div class="last_btn button normal_btn">Play!</div>
+                </div>
+                <div id="step4">
+                    <img src="gfx/raffay_b.png" alt="raffay logo" />
+                </div>
+            </div>
+			<img id="ground" src="gfx/ground.png" alt="ground "/>
+            <img id="overlay" src="gfx/ground_overlay.png" alt="ground_overlay" />
+            <img id="char" src="gfx/npcs/char_up0.gif" alt="character" />
+            <div id="blockadeBox">
+            	<!-- Blokady -->
+            </div>
+        </div>
+    </div>
+    <div id="bar-dn">
+		<div id="totalPlayers">
+    	Players: <span class="totalPlayersNumb">
+
+
+
+10317</span> &nbsp;&nbsp;&nbsp;Check: <span class="showTop">Top 15</span>
+        </div>
+        <div id="soundBg">
+            <span>Sound</span>
+            <div id="sound"></div>
+        </div>
+        <div class="like-box">
+        <div class="fb-like-box" data-href="http://www.facebook.com/JspGame" data-width="293" data-show-faces="false" data-stream="false" data-header="false"></div>
+        </div>
+    </div>
+    <div id="bottom">
+		<p>Design & code: raffay 2012<br /><a href="http://raffay.pl" target="_blank">www.raffay.pl</a></p>
+		<div>
+		    <div id="disqus_thread"></div>
+			<script type="text/javascript">
+				/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+				var disqus_shortname = 'jspokemongame'; // required: replace example with your forum shortname
+		
+				/* * * DON'T EDIT BELOW THIS LINE * * */
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+			
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+button {
+	height:10vh;
+	border-radius: 45px 10px 45px 10px;
+	width: 14%;
+	color:white;
+	margin: -10px;
+	text-decoration: none;
+	font-family: 'eraser';
+	background-color: black;
+	opacity:0.9;
+	font-size: 20px;
+	
+}

@@ -1,8 +1,8 @@
 Crafty.scene("puzzleLoading", function() {
-  Crafty.background("#DC4428");
+  Crafty.background("111");
   Crafty.e('2D, DOM, Text, HTML')
   .attr({
-    w: 900,
+    w: 700,
     h: 500,
     x: 50,
     y: 100
@@ -11,7 +11,7 @@ Crafty.scene("puzzleLoading", function() {
     "text-align": "center",
   })
 
-  .textFont({ size: '40px', weight: 'bold', family: 'eraser', })
+  .textFont({ size: '60px', weight: 'bold', family: 'eraser', })
   .textColor('white')
 
   Crafty.load(['img/cards.png', 'img/card.png'], function() {

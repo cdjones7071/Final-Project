@@ -4,8 +4,8 @@ Game = {
     width:  55,
     height: 38,
     tile: {
-      width:  16,
-      height: 16
+      width:  20,
+      height: 18
     }
   },
 

@@ -26,10 +26,7 @@ function highScores() {
 	Crafty.scene('Loading');
 }
 function clearScores() {
-	var gameData = JSON.parse(window.localStorage.getItem('memoryScoreData'))||{scores:[]};
-	gameData.scores = [];
-	Crafty('Highscore').gameData = gameData;
-	window.localStorage.setItem('memoryScoreData', JSON.stringify(gameData));
+	Crafty.scene('highScores');
 }
 
 Crafty.Util.arrayShuffle = function(o) {

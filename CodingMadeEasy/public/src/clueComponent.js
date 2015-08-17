@@ -301,7 +301,7 @@ function processinput() {
 				tempmessage = "The magnifying glass is not here!";
 			}
 		}
-		else if (weaponlocations[murderweapon] == currentroom) { hasmurderweapon = true; tempmessage = "You now have the murder weapon.<br/>"; weaponpresence = ""; weaponlocations[murderweapon] = -1; }
+		else if (weaponlocations[murderweapon] == currentroom) { hasmurderweapon = true; tempmessage = "You now have the key to get out.<br/>"; weaponpresence = ""; weaponlocations[murderweapon] = -1; }
 		else { tempmessage = "Why cant you pick that up?"; }
 	}
 	else if (commands[0] == "GATHER") {
@@ -330,11 +330,11 @@ function processinput() {
 				score = (100 - roomentrances)*11;
 				roomentrances = 0;
 				warning="";
-				tempmessage = "You have gathered the group together to hear the results of your investigation. The doors of the house are unlocked, so anyone can escape. You may make your escape plan known.";
-				room = "You have gathered the group together to hear the results of your investigation. The doors of the house are unlocked, so anyone can escape. You may make your escape plan known.";
+				tempmessage = "You have gathered the group together to hear the results of your investigation. The doors of the jail are unlocked, so anyone can escape. You may make your escape plan known and leave to freedom now.";
+				room = "You have gathered the group together to hear the results of your investigation. The doors of the house are unlocked, so anyone can escape. You may make your escape plan known and leave to freedom now.";
 			}
 			else {
-				tempmessage = "But you're not in a room!<br/><br/>";
+				tempmessage = "But you're not in a room Jeronimo will hear you!<br/><br/>";
 			}
 		}	
 	}
@@ -342,7 +342,7 @@ function processinput() {
 		if (commands[1] == "FLOOR" || commands[1] == "CARPET") {
 			if (hasmagnifyingglass == true) {
 				if (currentroom == murderroom) {
-					tempmessage = "The are specks of blood and guts on the carpet!";
+					tempmessage = "There is trap door in the carpet!";
 				}
 				else {
 					tempmessage = "You see nothing special about the floor";
@@ -356,7 +356,7 @@ function processinput() {
 			if (hasmagnifyingglass == true) {
 				for (var i=0; i<8; i++) {
 					if (weaponlocations[i] == currentroom) { 
-						if (murderweapon == i) {tempmessage = '<div style="color:red;">There are keys attach to it! It must be the way out of here!<br/></div>';}
+						if (murderweapon == i) {tempmessage = '<div style="color:red;">There are keys attach to it! It must be the way out of here now where do I use it?<br/></div>';}
 						else {tempmessage = "There is nothing special about the "+ weapons[i];}
 					}
 				}	
@@ -378,12 +378,12 @@ function processinput() {
 					if (character[i][0].toUpperCase() == commands[1]) {
 						if (character[i][1].toUpperCase() == commands[2]) {
 							if (murderer!=i) {
-								tempmessage = '"I dont know how to get outta here, you blundering fool, and I can prove it! I have bben here for 15 years, I`m also a close personal friend of the man who told us to help you or T.M.W.T.U.T.H.U for short. I dare say he`ll have something to say about this!"<br/><br/>Click <a href="sleuth.html">here</a> to play again.';
+								tempmessage = '"I dont know how to get outta here, you blundering fool, and I can prove it! I have bben here for 15 years, I`m also a close personal friend of the man who told us to help you or T.M.W.T.U.T.H.U for short. I dare say he`ll have something to say about this, If I knew him!"<br/><br/>Click <a href="sleuth.html">here</a> to play again.';
 								say(tempmessage);
 								Crafty.pause();
 							}
 							else if (currentroom!=murderroom) {
-								tempmessage = '"Yeaa, I murdered ' + character[victim][0] + ' Chosen one, but it wasn`t in this room! I dare say your incompetence will see me in the good graces of Jeronimo, and you with the ol peas and grool diet!"<br/><br/>Click <a href="game.html">here</a> to play again.';
+								tempmessage = '"Yeaa, I know how to get out of here Chosen one, but it isnt in this room! I dare say your incompetence will see me in the good graces of Jeronimo, and you with the ol peas and grool diet!"<br/><br/>Click <a href="game.html">here</a> to play again.';
 								say(tempmessage);
 								Crafty.pause();
 							}
@@ -399,7 +399,7 @@ function processinput() {
 			}
 		}
 	}
-	else { tempmessage = '<font style="color: #9090ff">Command not understood.</font><br/>'; }
+	else { tempmessage = '<font style="color: #9090ff">That is not a command.</font><br/>'; }
 	buffer = "";
 }
 
@@ -429,16 +429,3 @@ function lockdoors () {
       }
     }
 }
-
-function posttofb () {
-		FB.init({ 
-            appId:'386674258100495', cookie:true,
-            status:true, xfbml:true 
-         });
-
-         FB.ui({ method: 'feed', 
-         	link: 'http://www.bencollier.info/sleuth',
-            description: 'Play SleuthJS online today and figure out whodunnit in this Javascript game inspired by 80s classic "Sleuth"!',
-            caption: 'I solved the murder and scored ' + score + ' points in SleuthJS!',
-            picture: 'http://www.bencollier.info/sleuth/glass.jpg'});
-       }

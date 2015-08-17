@@ -1,4 +1,4 @@
-Crafty.Scene('ClueStart', function(){
+
 
 // Number Generator
 
@@ -297,8 +297,8 @@ Game = {
     width:  80,
     height: 25,
     tile: {
-      width:  14,
-      height: 18
+      width:  16,
+      height: 16
     }
   },
  
@@ -327,8 +327,8 @@ Game = {
     
     // Load and initialise graphics
     
-    Crafty.sprite(23, 30, "doc.png", {
-	    spr_player: [0, 0, 0, 0],
+    Crafty.sprite(20, "doc.png", {
+	    spr_player: [2, 0, 0, 0],
 	});
     Crafty.sprite(50, 30, "floor.png", {
 	    spr_char: [4, 5, 0, 0],
@@ -406,5 +406,3 @@ Game = {
       
        }
    }
-
-})

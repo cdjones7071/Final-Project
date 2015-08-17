@@ -99,7 +99,7 @@ Crafty.scene("Intro3", function() {
     .attr({x:50, y:100, w:700, h:500})
     .css({'text-align': 'center'})
     .text('Think of me as your "sprite" guide! Ha! ')
-    .textFont({ size: '40px', weight: 'bold', family: 'eraser', })
+    .textFont({ size: '60px', weight: 'bold', family: 'eraser', })
     .textColor('white')
     .bind('KeyDown', function(e) {
       if (e.key == Crafty.keys['SPACE']) {
@@ -114,13 +114,29 @@ Crafty.scene("Intro4", function() {
     Crafty.e('2D, DOM, Text, HTML')
     .attr({x:50, y:100, w:700, h:500})
     .css({'text-align': 'center'})
-    .text('Enough of the funny stuff your first minigame involves a puzzle game with questions and answers involing javascript ')
-    .textFont({ size: '40px', weight: 'bold', family: 'eraser', })
+    .text('Enough of the funny stuff your first minigame involves a game similar to pac-man where you have to collect items in order to read a javascript fact that you can use later in the game')
+    .textFont({ size: '60px', weight: 'bold', family: 'eraser', })
     .textColor('white')
     .bind('KeyDown', function(e) {
       if (e.key == Crafty.keys['SPACE']) {
         skip_intro = true;
-        Crafty.scene('puzzleLoading');
+        Crafty.scene('Intro5');
+      }
+    })
+  });
+
+Crafty.scene("Intro5", function() {
+    Crafty.background("#111");
+    Crafty.e('2D, DOM, Text, HTML')
+    .attr({x:50, y:100, w:700, h:500})
+    .css({'text-align': 'center'})
+    .text('Press the collections buttton above to start the game ')
+    .textFont({ size: '60px', weight: 'bold', family: 'eraser', })
+    .textColor('white')
+    .bind('KeyDown', function(e) {
+      if (e.key == Crafty.keys['SPACE']) {
+        skip_intro = true;
+        Crafty.scene('Loading');
       }
     })
   });
@@ -131,7 +147,7 @@ Crafty.scene("javascriptFact1", function() {
     .attr({x:50, y:100, w:700, h:500})
     .css({'text-align': 'center'})
     .text(' Null is a object')
-    .textFont({ size: '40px', weight: 'bold', family: 'eraser', })
+    .textFont({ size: '60px', weight: 'bold', family: 'eraser', })
     .textColor('white')
     .bind('KeyDown', function(e) {
       if (e.key == Crafty.keys['SPACE']) {
@@ -147,7 +163,7 @@ Crafty.scene("javascriptFact2", function() {
     .attr({x:50, y:100, w:700, h:500})
     .css({'text-align': 'center'})
     .text(' YOU CAN FAKE SCOPE         The scope in which something executes defines what variables are accessible. Free-standing JavaScript (i.e. JavaScript that does not run inside a function) operates within the global scope of the window object, to which everything has access; whereas local variables declared inside functions are accessible only within that function, not outside.')
-    .textFont({ size: '40px', weight: 'bold', family: 'eraser', })
+    .textFont({ size: '60px', weight: 'bold', family: 'eraser', })
     .textColor('white')
     .bind('KeyDown', function(e) {
       if (e.key == Crafty.keys['SPACE']) {
@@ -163,32 +179,63 @@ Crafty.scene("javascriptFact3", function() {
     .attr({x:50, y:100, w:700, h:500})
     .css({'text-align': 'center'})
     .text('Functions can executes themselves')
-    .textFont({ size: '40px', weight: 'bold', family: 'eraser', })
+    .textFont({ size: '60px', weight: 'bold', family: 'eraser', })
     .textColor('white')
     .bind('KeyDown', function(e) {
       if (e.key == Crafty.keys['SPACE']) {
         skip_intro = true;
-        Crafty.scene('ClueStart');
+        Crafty.scene('puzzleStart');
+      }
+    })
+  });
+
+Crafty.scene("puzzleStart", function() {
+    Crafty.background("#111");
+    Crafty.e('2D, DOM, Text, HTML')
+    .attr({x:50, y:100, w:700, h:500})
+    .css({'text-align': 'center'})
+    .text('OHHH NOOOO I didnt mean to give you the good facts yet I know I said I wanted to teach you Javascript but those facts were too advance')
+    .textFont({ size: '60px', weight: 'bold', family: 'eraser', })
+    .textColor('white')
+    .bind('KeyDown', function(e) {
+      if (e.key == Crafty.keys['SPACE']) {
+        skip_intro = true;
+        Crafty.scene('PuzzleContinue');
+      }
+    })
+  });
+
+Crafty.scene("PuzzleContinue", function() {
+    Crafty.background("#111");
+    Crafty.e('2D, DOM, Text, HTML')
+    .attr({x:50, y:100, w:700, h:500})
+    .css({'text-align': 'center'})
+    .text('Work  on this puzzle game about horse things while I figure out what to do with you OH Yeah Press the puzzle button to get started')
+    .textFont({ size: '60px', weight: 'bold', family: 'eraser', })
+    .textColor('white')
+    .bind('KeyDown', function(e) {
+      if (e.key == Crafty.keys['SPACE']) {
+        skip_intro = true;
+        Crafty.scene('puzzleLoading');
       }
     })
   });
 
 
-Crafty.scene('Victory', function() {
+Crafty.scene('highScores', function() {
   Crafty.e('2D, DOM, Text, HTML')
     .attr({x:50, y:100, w:900, h:500})
     .css({'text-align': 'center'})
-    .text('Congrats you have completed the intra-level test, good on to the next test!')
-    .textFont({ size: '40px', weight: 'bold', family: 'eraser', });
-  this.restart_game = this.bind('KeyDown', function() {
-    Crafty.scene('Loading');
+    .text('Wow look at you Mr. I know everything!!! Lets see you get out of this palace !')
+    .textFont({ size: '60px', weight: 'bold', family: 'eraser', })
+    .textColor('white')
+    .bind('KeyDown', function(e) {
+      if (e.key == Crafty.keys['SPACE']) {
+        skip_intro = true;
+        Crafty.scene('puzzleLoading');
+      }
+    })
   });
-}, function() {
-  // Remove our event binding from above so that we don't
-  //  end up having multiple redundant event watchers after
-  //  multiple restarts of the game
-  this.unbind('KeyDown', this.restart_game);
-});
 
 // Victory scene
 // -------------
@@ -239,9 +286,13 @@ Crafty.scene('Loading', function(){
       spr_border:    [0, 6, 0, 0],
       spr_Floor:    [0, 5, 0, 0],
       spr_village: [0, 19, 0, 2],
-      spr_characters: [0, 1, 0, 0]
+
 
     });
+
+  Crafty.sprite(20, 'doc.png', {
+    spr_characters: [2, 0, 0, 0]
+  });
 
     Crafty.defineScene("PuzzleIntro", function() {
     Crafty.background("#999");
